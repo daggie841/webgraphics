@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WebGraphics Solutions — Web & Graphics Solutions</title>
+  <meta name="description" content="WebGraphics Solutions — Web design, development, UI/UX and branding for businesses. Portfolio, pricing, and contact." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Tailwind CDN for quick prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small extra polish beyond Tailwind */
+    html {scroll-behavior: smooth}
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px);}    
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 glass shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-20 h-20 rounded-md flex items-center justify-center">
+        <img src="logo.jpeg" alt="Logo"/>
+          <div class="font-semibold">WebGraphics Solutions</div>
+        </div>
+      </a>
+        <div class="text-2xl text-blue-500 text-center"><i>0768466612</i></div>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+        <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+       <a href="https://wa.me/254768466612?text=Hello%20webGraphics%20solutions"class="text-green-500 w-30 h-30 rounded-md flex items-center justify-center text-lg"
+        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+      <button id="navToggle" class="md:hidden text-gray-600"><i class="fa fa-bars"></i></button>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-6">
+      <a href="#services" class="block py-2">Services</a>
+      <a href="#portfolio" class="block py-2">Portfolio</a>
+      <a href="#pricing" class="block py-2">Pricing</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="pt-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold">We build <span class="text-blue-600">websites</span> & <span class="text-blue-600">graphics</span> that grow businesses.</h1>
+        <p class="mt-4 text-gray-600">From brand identity to responsive web apps — design and code crafted to convert visitors into customers.</p>
+        <div class="mt-6 flex gap-4">
+          <a href="#contact" class="bg-blue-500 text-white px-5 py-3 rounded-md shadow">Get a Quote</a>
+          <a href="#portfolio" class="border border-blue-500 text-blue-600 px-5 py-3 rounded-md">View Portfolio</a>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-2 gap-3 text-sm text-gray-600">
+        <li class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-blue-500"></i>
+          Fast & responsive
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-blue-500"></i>
+          SEO ready
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-blue-500"></i>
+          E-commerce
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-blue-500"></i>
+          Branding + Graphics
+        </li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <!-- mockup / service highlights -->
+       <video 
+        src="laundry.mp4"class="w-full rounded-lg mb-4" autoplay muted loop playsinline></video>
+        <div class="flex gap-4 items-center">
+          <div class="flex-1">
+            <div class="text-sm text-gray-500">Recent project</div>
+            <div class="font-semibold">Laundry Website Design</div>
+          </div>
+          <div class="text-xs text-gray-500">Case study</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="mt-16 mb-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Services</h2>
+        <p class="text-gray-600 mt-3">Clear packages you can start with or customize.</p>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold text-center">Web Design & Dev</h3>
+          <p class="text-sm text-gray-600 mt-2 text-center">Responsive sites, CMS, e-commerce, performance optimisation.</p>
+          <ul class="mt-3 text-sm text-gray-600">
+            <li>• HTML/CSS/JS, PHP, WordPress</li>
+            <li>• Mobile-first</li>
+            <li>• Speed & SEO basics</li>
+          </ul>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold text-center">Branding & Graphic Design</h3>
+          <p class="text-sm text-gray-600 mt-2 text-center">Logos, identity, social media graphics, print-ready files.</p>
+          <ul class="mt-3 text-sm text-gray-600">
+            <li>• Logo & color systems</li>
+            <li>• Business cards & flyers</li>
+            <li>• Social templates</li>
+          </ul>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold text-center">UI / UX & Prototyping</h3>
+          <p class="text-sm text-gray-600 mt-2 text-center">Wireframes, prototypes, usability testing and design systems.</p>
+          <ul class="mt-3 text-sm text-gray-600">
+            <li>• Figma / Prototyping</li>
+            <li>• Accessibility checks</li>
+            <li>• Conversion-focused UI</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="mt-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Portfolio</h2>
+        <p class="text-gray-600 mt-2">Selected projects with short case notes.</p>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <img src="tbs.PNG" alt="project 1" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="font-semibold">Table Banking System Website</div>
+            <div class="text-sm text-gray-600 mt-2">Custom platform for group savings management, member dashboards, and transaction tracking.</div>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>HTML / PHP / JS / Tailwind</span>
+              <a href="#" class="underline">View</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <img src="ecomerce.PNG" alt="project 2" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="font-semibold">E-commerce Landing Page</div>
+            <div class="text-sm text-gray-600 mt-2">Modern responsive design with product showcase, brand identity, and conversion-optimized layout.</div>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>Brand / Landing/ conversion-optimized</span>
+              <a href="#" class="underline">View</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <img src="mpeketoni boys.PNG" alt="project 3" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="font-semibold">Mpeketoni Boys High School Website</div>
+            <div class="text-sm text-gray-600 mt-2">Custom school portal with student management, fee tracking, announcements, and parent communication features.</div>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+              <span>PHP / MySQL</span>
+              <a href="#" class="underline">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="mt-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-500">Pricing & Packages</h2>
+      <p class="text-gray-600 mt-2">Starting prices — exact quote after brief discovery.</p>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="text-sm text-gray-500">Starter</div>
+          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 15,000</i></div>
+          <p class="text-sm text-gray-600 mt-2">Small business landing page — 3 pages, contact form, basic SEO.</p>
+          <a href="#contact" class="inline-block mt-4 underline">Request</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow border-2 border-blue-200">
+          <div class="text-sm text-gray-500">Business</div>
+          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 35,000 </i></div>
+          <p class="text-sm text-gray-600 mt-2">Custom site — CMS, up to 8 pages, speed optimisation.</p>
+          <a href="#contact" class="inline-block mt-4 underline">Request</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="text-sm text-gray-500">E-commerce</div>
+          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 60,000</i></div>
+          <p class="text-sm text-gray-600 mt-2">Online store — product management, payments, shipping setup.</p>
+          <a href="#contact" class="inline-block mt-4 underline">Request</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- IMAGE SECTION -->
+<section id="image-section" class="mt-12 mb-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <img src="ads.png" alt="Descriptive Alt Text" class="w-full h-auto rounded-lg shadow-md object-cover" />
+  </div>
+</section>
+
+  <!-- TESTIMONIALS -->
+  <section class="mt-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold">What clients say</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700">"Fast, professional and excellent communication. Our site traffic increased after launch."</p>
+          <div class="mt-4 text-sm text-gray-500">— Lydia W., Emcake Bakery</div>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700">"Great branding work. Our packaging looks premium now."</p>
+          <div class="mt-4 text-sm text-gray-500">— Manager, Sikam Farm</div>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700">"Reliable support and quick fixes when we needed them."</p>
+          <div class="mt-4 text-sm text-gray-500">— Admin, Mpeketoni Boys HS</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="mt-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold">Insights</h2>
+      <p class="text-gray-600 mt-2">Short posts to build SEO and authority.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-6">
+        <article class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold">How a Modern Website Helps Businesses</h3>
+          <p class="text-sm text-gray-600 mt-2">A short summary and tips you can use today.</p>
+          <a class="mt-3 inline-block text-sm underline" href="#">Read more</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold">Branding Mistakes to Avoid</h3>
+          <p class="text-sm text-gray-600 mt-2">Keep your identity consistent across channels.</p>
+          <a class="mt-3 inline-block text-sm underline" href="#">Read more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact" class="mt-16 mb-20">
+  <div class="max-w-4xl mx-auto px-6 bg-white p-8 rounded-lg shadow">
+    <h2 class="text-2xl font-bold">Contact & Request Quote</h2>
+    <p class="text-gray-600 mt-2">Tell us about your project — we’ll reply within 24 hours.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <form id="contactForm" class="space-y-4">
+        <input name="name" required placeholder="Full name" class="w-full p-3 border rounded" />
+        <input name="email" type="email" required placeholder="Email" class="w-full p-3 border rounded" />
+        <input name="phone" placeholder="Phone or WhatsApp" class="w-full p-3 border rounded" />
+        <select name="package" class="w-full p-3 border rounded">
+          <option value="">Select package</option>
+          <option>Starter</option>
+          <option>Business</option>
+          <option>E-commerce</option>
+        </select>
+        <textarea name="message" placeholder="Project brief / budget" class="w-full p-3 border rounded"></textarea>
+        <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded">Send Request</button>
+        <p id="formMessage" class="text-sm text-gray-600 mt-2"></p>
+      </form>
+
+      <!-- Social Media Icons -->
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <h3 class="text-xl font-semibold">Connect with us</h3>
+        <div class="flex space-x-4 mt-2">
+          <a href="#" class="text-gray-600 hover:text-blue-500 text-2xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-gray-600 hover:text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-600 hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-600 hover:text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-gray-600 mt-4 text-center">Follow us for updates and special offers!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="bg-white border-t py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm">© <span id="year"></span> WebGraphics Solutions — Web & Graphics</div>
+      <div class="text-sm text-gray-600">Built with care by Douglas — <a href="#about" class="underline">About</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Simple form handler (prototype) - replace with real endpoint or Netlify forms / EmailJS
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMessage');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      // for prototype we open mailto (quick) — production: send to server
+      const name = data.get('name') || 'Client';
+      const email = data.get('email') || '';
+      const message = encodeURIComponent('Hello, my project:\n' + (data.get('message')||'') + '\nBudget: ' + (data.get('package')||''));
+      const subject = encodeURIComponent('Website quote request - ' + name);
+      window.location = `mailto:youremail@example.com?subject=${subject}&body=${message}%0A%0AFrom:%20${encodeURIComponent(email)}`;
+      msg.textContent = 'Opening your mail client to send the request. You can also WhatsApp us.';
+      setTimeout(()=> msg.textContent = '', 6000);
+    });
+  </script>
+</body>
+</html>
