@@ -24,8 +24,13 @@
           <div class="font-semibold">WebGraphics Solutions</div>
         </div>
       </a>
-        <div class="text-2xl text-blue-500 text-center"><i>0768466612</i></div>
-      <nav class="hidden md:flex gap-6 items-center text-sm">
+      <a href="tel:0768466612"
+        class="flex items-center justify-center gap-3 text-blue-600 text-2xl font-semibold animate-bounce hover:text-blue-800 transition">
+        <!-- Phone Icon -->
+         <span class="text-3xl">📞</span>
+        <!-- Call Text -->
+        <span>Tap to Call</span></a>
+       <nav class="hidden md:flex gap-6 items-center text-sm">
         <a href="#services" class="hover:text-blue-600">Services</a>
         <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
         <a href="#pricing" class="hover:text-blue-600">Pricing</a>
@@ -301,13 +306,91 @@
   </div>
 </section>
 
+<footer class="bg-blue-600 text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
 
-  <footer class="bg-white border-t py-8">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="text-sm">© <span id="year"></span> WebGraphics Solutions — Web & Graphics</div>
-      <div class="text-sm text-gray-600">Built with care by Douglas — <a href="#about" class="underline">About</a></div>
+    <!-- Brand / About -->
+    <div>
+      <h3 class="text-xl font-bold text-white mb-4">
+        WebGraphics Solutions
+      </h3>
+      <p class="text-sm leading-relaxed">
+        We build websites & graphics that grow businesses. From brand identity
+        to responsive web apps — design and code crafted to convert visitors
+        into customers.
+      </p>
+
+      <div class="mt-4 flex gap-4">
+        <a href="#contact" class="text-white hover:text-white text-sm font-semibold">
+          Get a Quote
+        </a>
+        <a href="#portfolio" class="text-white hover:text-white text-sm font-semibold">
+          View Portfolio
+        </a>
+      </div>
     </div>
-  </footer>
+
+    <!-- Services -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>Web Design & Development</li>
+        <li>Branding & Graphic Design</li>
+        <li>UI / UX & Prototyping</li>
+        <li>SEO & Performance Optimisation</li>
+        <li>E-commerce Solutions</li>
+      </ul>
+    </div>
+
+    <!-- Portfolio -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">Recent Projects</h4>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <span class="font-medium text-white">Table Banking System</span><br>
+        </li>
+        <li>
+          <span class="font-medium text-white">E-commerce Landing Page</span><br>
+          <span class="text-gray-400">Brand / Conversion Optimized</span>
+        </li>
+        <li>
+          <span class="font-medium text-white">Mpeketoni Boys HS Website</span><br>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">Connect With Us</h4>
+      <p class="text-sm mb-3">
+        Tell us about your project — we’ll reply within 24 hours.
+      </p>
+
+      <a href="tel:0768466612"
+         class="inline-flex items-center gap-2 text-white font-semibold animate-pulse hover:text-blue-300 transition">
+        📞 Tap to Call
+      </a>
+
+      <div class="mt-4 text-sm">
+        <p>Email: <span class="text-gray-400">info@webgraphicssolutions.com</span></p>
+        <p>Phone / WhatsApp: <span class="text-gray-400">0768 466 612</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800 mt-12 pt-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+      <p>© 2026 WebGraphics Solutions — Web & Graphics</p>
+      <p>
+        Built with care by
+        <span class="text-white font-medium">Douglas</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
 
   <script>
     // Small interactivity
