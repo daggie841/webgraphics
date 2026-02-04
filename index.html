@@ -3,8 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WebGraphics Solutions — Web & Graphics Solutions</title>
-  <meta name="description" content="WebGraphics Solutions — Web design, development, UI/UX and branding for businesses. Portfolio, pricing, and contact." />
+  <!-- Primary SEO -->
+<title>WebGraphics Solutions — Web design, development & branding</title>
+<meta name="description" content="WebGraphics Solutions — professional web design, responsive development, e-commerce and branding. Get a fast, SEO-ready site that converts. Call 0768 466 612." />
+<meta name="keywords" content="web design, web development, graphic design, branding, responsive website, e-commerce, UI UX, SEO, small business website, website design Kenya,landing page, converting" />
+<link rel="canonical" href="https://example.com/" />
+<!-- Robots -->
+<meta name="robots" content="index,follow" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="WebGraphics Solutions — Web design, development & branding" />
+<meta property="og:description" content="Professional websites, branding and e-commerce. Fast, responsive designs that convert visitors into customers. Request a quote today." />
+<meta property="og:url" content="https://example.com/" />
+<meta property="og:image" content="https://example.com/path/to/og-image.jpg" />
+<meta property="og:site_name" content="WebGraphics Solutions" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WebGraphics Solutions — Web design, development & branding" />
+<meta name="twitter:description" content="Fast, SEO-ready websites, brand identity, and e-commerce solutions. Get a quote — 0768 466 612." />
+<meta name="twitter:image" content="https://example.com/path/to/og-image.jpg" />
+<!-- Mobile / Charset -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Structured data (Organization + Website) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "WebGraphics Solutions",
+      "url": "https://example.com/",
+      "logo": "https://example.com/path/to/logo.png",
+      "telephone": "0768466612",
+      "sameAs": [
+        "https://www.facebook.com/share/1DYBm7qYF1/",
+        "https://www.instagram.com/daggie820",
+        "https://www.linkedin.com/in/douglas-njuguna-bbb264236"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://example.com/",
+      "name": "WebGraphics Solutions",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/icon-3xl" href="logo.webp" />
+  <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <!-- Tailwind CDN for quick prototype -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +71,7 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-white/80 glass shadow-sm">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
         <div class="w-20 h-20 rounded-md flex items-center justify-center">
         <img src="logo.jpeg" alt="Logo"/>
@@ -25,9 +79,9 @@
         </div>
       </a>
       <a href="tel:0768466612"
-        class="flex items-center justify-center gap-3 text-blue-600 text-2xl font-semibold animate-bounce hover:text-blue-800 transition">
+        class="flex items-center justify-center gap-2 text-blue-600 text-2xl font-semibold animate-bounce hover:text-blue-800 transition">
         <!-- Phone Icon -->
-         <span class="text-3xl">📞</span>
+         <span class="text-2xl">📞</span>
         <!-- Call Text -->
         <span>Tap to Call</span></a>
        <nav class="hidden md:flex gap-6 items-center text-sm">
@@ -35,18 +89,23 @@
         <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
         <a href="#pricing" class="hover:text-blue-600">Pricing</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
-       <a href="https://wa.me/254768466612?text=Hello%20webGraphics%20solutions"class="text-green-500 w-30 h-30 rounded-md flex items-center justify-center text-lg"
+       <a href="https://wa.me/254768466612?text=Hello%20webGraphics%20solutions"class="text-green-500 hover:text-green-700 w-30 h-30 rounded-md flex items-center justify-center text-3xl"
         aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </nav>
       <button id="navToggle" class="md:hidden text-gray-600"><i class="fa fa-bars"></i></button>
     </div>
     <!-- mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden px-6 pb-6">
-      <a href="#services" class="block py-2">Services</a>
-      <a href="#portfolio" class="block py-2">Portfolio</a>
-      <a href="#pricing" class="block py-2">Pricing</a>
-      <a href="#about" class="block py-2">About</a>
-      <a href="#contact" class="block py-2">Contact</a>
+    <div id="mobileMenuOverlay" class="hidden fixed inset-0 z-40"></div>
+    <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-1/2 h-screen bg-white shadow-lg z-50 overflow-y-auto px-6 py-6">
+      <button id="closeMenuBtn" class="absolute top-4 right-4 text-gray-600 text-2xl"><i class="fa fa-times"></i></button>
+      <a href="#services" class="block py-3 text-lg hover:text-blue-600">Services</a>
+      <a href="#portfolio" class="block py-3 text-lg hover:text-blue-600">Portfolio</a>
+      <a href="#pricing" class="block py-3 text-lg hover:text-blue-600">Pricing</a>
+      <a href="#about" class="block py-3 text-lg hover:text-blue-600">About</a>
+      <a href="#contact" class="block py-3 text-lg hover:text-blue-600">Contact</a>
+      <a href="https://wa.me/254768466612?text=Hello%20webGraphics%20solutions"class="text-green-500 hover:text-green-700 w-30 h-30 rounded-md flex items-center justify-left text-5xl"
+        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </nav>
     </div>
   </header>
 
@@ -105,12 +164,12 @@
 
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <article class="bg-white p-6 rounded-lg shadow">
-          <h3 class="font-semibold text-center">Web Design & Dev</h3>
+          <h3 class="font-semibold text-center">Web/App Design & Dev</h3>
           <p class="text-sm text-gray-600 mt-2 text-center">Responsive sites, CMS, e-commerce, performance optimisation.</p>
           <ul class="mt-3 text-sm text-gray-600">
-            <li>• HTML/CSS/JS, PHP, WordPress</li>
-            <li>• Mobile-first</li>
-            <li>• Speed & SEO basics</li>
+            <li>• Fast loading speed</li>
+            <li>• Mobile responsive design</li>
+            <li>• Best keywords & Strong SEO</li>
           </ul>
         </article>
 
@@ -191,35 +250,130 @@
 
   <!-- PRICING -->
   <section id="pricing" class="mt-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-500">Pricing & Packages</h2>
-      <p class="text-gray-600 mt-2">Starting prices — exact quote after brief discovery.</p>
+  <div class="max-w-6xl mx-auto px-6">
 
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="text-sm text-gray-500">Starter</div>
-          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 15,000</i></div>
-          <p class="text-sm text-gray-600 mt-2">Small business landing page — 3 pages, contact form, basic SEO.</p>
-          <a href="#contact" class="inline-block mt-4 underline">Request</a>
+    <!-- SEO-friendly heading -->
+    <h2 class="text-3xl font-bold text-blue-500">
+      Website/App Pricing & Packages.
+    </h2>
+
+    <!-- SEO-rich description -->
+    <p class="text-gray-600 mt-2">
+      Affordable web design packages for small businesses, schools, startups, and e-commerce brands.
+      Transparent website pricing with flexible customization options.
+    </p>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+
+      <!-- BASIC -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-sm text-gray-500">
+          Basic Website Package
+        </h3>
+
+        <div class="text-3xl font-bold mt-2 text-blue-500">
+          <i>Ksh 15,000</i>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow border-2 border-blue-200">
-          <div class="text-sm text-gray-500">Business</div>
-          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 35,000 </i></div>
-          <p class="text-sm text-gray-600 mt-2">Custom site — CMS, up to 8 pages, speed optimisation.</p>
-          <a href="#contact" class="inline-block mt-4 underline">Request</a>
-        </div>
+        <p class="text-sm text-gray-600 mt-2">
+          Small business website design — 3 responsive pages, contact form, mobile-friendly layout,
+          and basic SEO optimisation for Google visibility.
+        </p>
 
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="text-sm text-gray-500">E-commerce</div>
-          <div class="text-3xl font-bold mt-2 text-blue-500"><i>Ksh 60,000</i></div>
-          <p class="text-sm text-gray-600 mt-2">Online store — product management, payments, shipping setup.</p>
-          <a href="#contact" class="inline-block mt-4 underline">Request</a>
-        </div>
+        <p class="sr-only">
+          Affordable website design for small businesses in Kenya.
+        </p>
+
+        <a href="#contact" class="inline-block mt-4 underline">
+          Request Website Quote
+        </a>
       </div>
+
+      <!-- ADVANCED -->
+      <div class="bg-white p-6 rounded-lg shadow border-2 border-blue-200">
+        <h3 class="text-sm text-gray-500">
+          Advanced Website Development
+        </h3>
+
+        <div class="text-3xl font-bold mt-2 text-blue-500">
+          <i>Ksh 35,000</i>
+        </div>
+
+        <p class="text-sm text-gray-600 mt-2">
+          Custom website development with CMS, up to 8 pages, SEO-ready structure,
+          fast loading speed, and scalable design for growing businesses.
+        </p>
+
+        <p class="sr-only">
+          Professional web development services in Kenya with CMS and SEO.
+        </p>
+
+        <a href="#contact" class="inline-block mt-4 underline">
+          Get a Custom Quote
+        </a>
+      </div>
+
+      <!-- FULL -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-sm text-gray-500">
+          Fully Functional Website / Web App
+        </h3>
+
+        <div class="text-3xl font-bold mt-2 text-blue-500">
+          <i>Ksh 60,000</i>
+        </div>
+
+        <p class="text-sm text-gray-600 mt-2">
+          E-commerce website or web application — product management, online payments,
+          shipping integration, admin dashboard, and advanced SEO setup.
+        </p>
+
+        <p class="sr-only">
+          E-commerce website development and web application pricing in Kenya.
+        </p>
+
+        <a href="#contact" class="inline-block mt-4 underline">
+          Start Your Project
+        </a>
+      </div>
+
     </div>
-  </section>
-  <!-- IMAGE SECTION -->
+  </div>
+</section>
+
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+    // Open menu
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenuOverlay.classList.remove('hidden');
+    });
+
+    // Close menu
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      mobileMenuOverlay.classList.add('hidden');
+    }
+
+    // Close on overlay click
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+
+    // Close on close button click
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Close menu links
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on scroll
+    window.addEventListener('scroll', closeMenu);
+  </script>
 <section id="image-section" class="mt-12 mb-16">
   <div class="max-w-6xl mx-auto px-6">
     <img src="ads.png" alt="Descriptive Alt Text" class="w-full h-auto rounded-lg shadow-md object-cover" />
@@ -232,16 +386,46 @@
       <h2 class="text-2xl font-bold">What clients say</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <blockquote class="bg-white p-6 rounded-lg shadow">
+          <div class="flex gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
           <p class="text-gray-700">"Fast, professional and excellent communication. Our site traffic increased after launch."</p>
-          <div class="mt-4 text-sm text-gray-500">— Lydia W., Emcake Bakery</div>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="lady.webp" alt="Lydia W." class="w-10 h-10 rounded-full object-cover" />
+            <div class="text-sm text-gray-500">— Lydia W., Emcake Bakery</div>
+          </div>
         </blockquote>
         <blockquote class="bg-white p-6 rounded-lg shadow">
+          <div class="flex gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
           <p class="text-gray-700">"Great branding work. Our packaging looks premium now."</p>
-          <div class="mt-4 text-sm text-gray-500">— Manager, Sikam Farm</div>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="ceo.webp" alt="Manager" class="w-10 h-10 rounded-full object-cover" />
+            <div class="text-sm text-gray-500">— Manager, Sikam Farm</div>
+          </div>
         </blockquote>
         <blockquote class="bg-white p-6 rounded-lg shadow">
+          <div class="flex gap-1 mb-3">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
           <p class="text-gray-700">"Reliable support and quick fixes when we needed them."</p>
-          <div class="mt-4 text-sm text-gray-500">— Admin, Mpeketoni Boys HS</div>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="website.webp" alt="Admin" class="w-10 h-10 rounded-full object-cover" />
+            <div class="text-sm text-gray-500">— Admin, Mpeketoni Boys HS</div>
+          </div>
         </blockquote>
       </div>
     </div>
@@ -257,17 +441,22 @@
         <article class="bg-white p-6 rounded-lg shadow">
           <h3 class="font-semibold">How a Modern Website Helps Businesses</h3>
           <p class="text-sm text-gray-600 mt-2">A short summary and tips you can use today.</p>
-          <a class="mt-3 inline-block text-sm underline" href="#">Read more</a>
+          <div class="details hidden mt-3 text-sm text-gray-700">
+            <p>A modern website increases credibility, reaches customers 24/7, improves search visibility, and provides analytics to track growth. Mobile responsiveness is essential for user retention.</p>
+          </div>
+          <button class="mt-3 inline-block text-sm underline read-more-btn" data-article="1">Read more</button>
         </article>
         <article class="bg-white p-6 rounded-lg shadow">
           <h3 class="font-semibold">Branding Mistakes to Avoid</h3>
           <p class="text-sm text-gray-600 mt-2">Keep your identity consistent across channels.</p>
-          <a class="mt-3 inline-block text-sm underline" href="#">Read more</a>
+          <div class="details hidden mt-3 text-sm text-gray-700">
+            <p>Common branding mistakes include inconsistent logos, poor font choices, unclear messaging, and ignoring your target audience. Maintain brand guidelines across all platforms for maximum impact.</p>
+          </div>
+          <button class="mt-3 inline-block text-sm underline read-more-btn" data-article="2">Read more</button>
         </article>
       </div>
     </div>
   </section>
-
   <!-- CONTACT -->
 <section id="contact" class="mt-16 mb-20">
   <div class="max-w-4xl mx-auto px-6 bg-white p-8 rounded-lg shadow">
@@ -282,9 +471,9 @@
         <input name="phone" placeholder="Phone or WhatsApp" class="w-full p-3 border rounded" />
         <select name="package" class="w-full p-3 border rounded">
           <option value="">Select package</option>
-          <option>Starter</option>
-          <option>Business</option>
-          <option>E-commerce</option>
+          <option>Basic</option>
+          <option>Advanced</option>
+          <option>Fully Custom</option>
         </select>
         <textarea name="message" placeholder="Project brief / budget" class="w-full p-3 border rounded"></textarea>
         <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded">Send Request</button>
@@ -295,10 +484,12 @@
       <div class="flex flex-col items-center justify-center space-y-4">
         <h3 class="text-xl font-semibold">Connect with us</h3>
         <div class="flex space-x-4 mt-2">
-          <a href="#" class="text-gray-600 hover:text-blue-500 text-2xl"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.facebook.com/share/1DYBm7qYF1/" class="text-blue-500 hover:text-blue-400 text-3xl"><i class="fab fa-facebook"></i></a>
           <a href="#" class="text-gray-600 hover:text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-600 hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-600 hover:text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/daggie820?igsh=MWFrenlsNTd2encybg==" class="text-pink-500 hover:text-pink-700 text-3xl"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/douglas-njuguna-bbb264236" class="text-blue-500 hover:text-blue-700 text-3xl"><i class="fab fa-linkedin"></i></a>
+          <a href="https://wa.me/254768466612?text=Hello%20webGraphics%20solutions"class="text-green-500 hover:text-green-700 text-3xl rounded-md flex items-center justify-center"
+        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="text-gray-600 mt-4 text-center">Follow us for updates and special offers!</p>
       </div>
@@ -372,8 +563,8 @@
       </a>
 
       <div class="mt-4 text-sm">
-        <p>Email: <span class="text-gray-400">info@webgraphicssolutions.com</span></p>
-        <p>Phone / WhatsApp: <span class="text-gray-400">0768 466 612</span></p>
+        <p>Email: <span class="text-white">info@webgraphicssolutions.com</span></p>
+        <p>Phone / WhatsApp: <span class="text-white">0768 466 612</span></p>
       </div>
     </div>
 
@@ -381,7 +572,7 @@
 
   <!-- Bottom Bar -->
   <div class="border-t border-gray-800 mt-12 pt-6">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white">
       <p>© 2026 WebGraphics Solutions — Web & Graphics</p>
       <p>
         Built with care by
@@ -391,13 +582,27 @@
   </div>
 </footer>
 
+<!--Insights-->
+ <script>
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const details = this.previousElementSibling;
+        details.classList.toggle('hidden');
+        this.textContent = details.classList.contains('hidden') ? 'Read more' : 'Read less';
+      });
+    });
+
+    // Hide details when leaving page
+    window.addEventListener('beforeunload', () => {
+      document.querySelectorAll('.details').forEach(detail => {
+        detail.classList.add('hidden');
+      });
+    });
+  </script>
 
   <script>
     // Small interactivity
     document.getElementById('year').textContent = new Date().getFullYear();
-    const navToggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    navToggle.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
 
     // Simple form handler (prototype) - replace with real endpoint or Netlify forms / EmailJS
     const form = document.getElementById('contactForm');
